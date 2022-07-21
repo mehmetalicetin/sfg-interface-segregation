@@ -1,0 +1,7 @@
+What the Interface Segregation Principle says is that your interface should not be bloated with methods that implementing classes don’t require.
+For such interfaces, also called “fat interfaces”, implementing classes are unnecessarily forced to provide implementations (dummy/empty) even for those methods that they don’t need.
+In addition, the implementing classes are subject to change when the interface changes.
+An addition of a method or change to a method signature requires modifying all the implementation classes even if some of them don’t use the method.
+The Interface Segregation Principle advocates segregating a “fat interface” into smaller and highly cohesive interfaces, known as “role interfaces”.
+Each “role interface” declares one or more methods for a specific behavior. Thus clients, instead of implementing a “fat interface”,
+can implement only those “role interfaces” whose methods are relevant to them.
